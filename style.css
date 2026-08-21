@@ -1,0 +1,140 @@
+/* ESTILOS GENERALES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #fceea7; /* Color cálido estilo crema/amarillo del video */
+  color: #4a3e3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* PANTALLA DEL TECLADO */
+#pin-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.pin-card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.pin-header {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #4a3e3d;
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.dot.filled {
+  background-color: #4a3e3d;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.keypad button {
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a3e3d;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.keypad button:active {
+  transform: scale(0.95);
+}
+
+/* SECCIÓN PRINCIPAL */
+#main-content {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.photos-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.polaroid-frame {
+  background: white;
+  padding: 10px 10px 25px 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: rotate(-2deg);
+  max-width: 180px;
+}
+
+.polaroid-frame.offset {
+  transform: rotate(3deg);
+}
+
+.polaroid-frame img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+audio {
+  width: 100%;
+  margin-top: 10px;
+}
