@@ -7,8 +7,14 @@
 
 body {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #fceea7; /* Color cálido estilo crema/amarillo del video */
-  color: #4a3e3d;
+  /* Imagen de fondo */
+  background-image: url('fondo.jpg'); 
+  background-size: cover;       /* Cubre toda la pantalla */
+  background-position: center;  /* Centra la ilustración */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+  
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
