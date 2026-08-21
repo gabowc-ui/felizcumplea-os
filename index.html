@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Bouquet for You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PANTALLA DE PIN -->
+  <div id="pin-screen">
+    <div class="pin-card">
+      <div class="pin-header">
+        <p>From: Tu Nombre</p>
+        <p>For: Su Nombre</p>
+      </div>
+
+      <div id="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="keypad">
+        <button onclick="pressNum('1')">1</button>
+        <button onclick="pressNum('2')">2</button>
+        <button onclick="pressNum('3')">3</button>
+        <button onclick="pressNum('4')">4</button>
+        <button onclick="pressNum('5')">5</button>
+        <button onclick="pressNum('6')">6</button>
+        <button onclick="pressNum('7')">7</button>
+        <button onclick="pressNum('8')">8</button>
+        <button onclick="pressNum('9')">9</button>
+        <button onclick="clearPin()" class="action-btn">C</button>
+        <button onclick="pressNum('0')">0</button>
+        <button onclick="checkPin()" class="action-btn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENIDO DEL REGALO -->
+  <div id="main-content" class="hidden">
+    <header class="hero">
+      <h1>Favorite Person</h1>
+    </header>
+
+    <main class="container">
+      <!-- MÚSICA DE SPOTIFY -->
+      <section class="card spotify-card">
+        <!-- Reemplaza la URL por el ID de tu canción favorita en Spotify -->
+        <iframe src="https://open.spotify.com/embed/track/3e91129671174620" width="100%" height="80" frameborder="0" allow="encrypted-media"></iframe>
+      </section>
+
+      <!-- GALERÍA POLAROID -->
+      <section class="photos-grid">
+        <div class="polaroid-frame">
+          <img src="foto1.jpg" alt="Recuerdo 1">
+        </div>
+        <div class="polaroid-frame offset">
+          <img src="foto2.jpg" alt="Recuerdo 2">
+        </div>
+      </section>
+
+      <!-- NOTA DE VOZ -->
+      <section class="card voice-card">
+        <p><strong>Voice note</strong></p>
+        <audio controls src="nota-de-voz.mp3"></audio>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
