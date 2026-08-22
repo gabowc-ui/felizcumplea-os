@@ -165,6 +165,54 @@ body {
   transform: translateX(100%);
 }
 
+/* Estado inicial (Pantalla del PIN) */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Puedes poner aquí tu fondo anterior o un color suave */
+  background-color: #fceea7;
+  transition: background 0.8s ease; /* Transición suave al cambiar de fondo */
+}
+
+/* Fondo nuevo que se activa tras la contraseña */
+body.bg-sakura {
+  /* Cargamos la imagen vertical */
+  background-image: url('fondo-sakura.jpg');
+  background-position: top center;  /* Inicia mostrando la parte superior (sakura) */
+  background-repeat: no-repeat;
+  background-size: 100% auto;       /* Ajusta el ancho al 100% para que la altura fluya con el scroll */
+  background-color: #1a2332;        /* Color de reserva para el fondo del lago */
+  align-items: flex-start;          /* Permite que el contenido fluya hacia abajo */
+}
+
+/* Estilo para que el contenedor principal sea largo y permita scrolear */
+#main-content {
+  width: 100%;
+  max-width: 500px;
+  min-height: 220vh; /* Hace que la página sea más alta que la pantalla para forzar el scroll */
+  padding: 40px 20px 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye el contenido a lo largo de toda la imagen */
+  box-sizing: border-box;
+}
+
+/* Tarjetas semitransparentes para que el texto y fotos se lean sobre el fondo */
+.card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  margin-bottom: 40px;
+}
+
 /* SECCIÓN PRINCIPAL */
 #main-content {
   width: 100%;
