@@ -171,7 +171,7 @@ body.bg-sakura {
   background-image: url('fondo-sakura.jpg');
   background-position: top center;  /* Inicia mostrando la parte superior (sakura) */
   background-repeat: no-repeat;
-  background-size: 100% auto;       /* Ajusta el ancho al 100% para que la altura fluya con el scroll */
+  background-size: 100% 100%;       /* Ajusta el ancho al 100% para que la altura fluya con el scroll */
   background-color: #1a2332;        /* Color de reserva para el fondo del lago */
   background-attachment: scroll !important;
   align-items: flex-start;          /* Permite que el contenido fluya hacia abajo */
