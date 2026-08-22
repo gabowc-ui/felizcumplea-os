@@ -181,7 +181,7 @@ body.bg-sakura {
 #main-content {
   width: 100%;
   max-width: 500px;
-  min-height: 150vh; /* Hace que la página sea más alta que la pantalla para forzar el scroll */
+  min-height: 200vh; /* Hace que la página sea más alta que la pantalla para forzar el scroll */
   padding: 40px 20px 100px 20px;
   display: flex;
   flex-direction: column;
