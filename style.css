@@ -165,21 +165,6 @@ body {
   transform: translateX(100%);
 }
 
-/* Estado inicial (Pantalla del PIN) */
-body {
-  font-family: 'Courier New', Courier, monospace;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  /* Puedes poner aquí tu fondo anterior o un color suave */
-  background-color: #fceea7;
-  transition: background 0.8s ease; /* Transición suave al cambiar de fondo */
-}
-
 /* Fondo nuevo que se activa tras la contraseña */
 body.bg-sakura {
   /* Cargamos la imagen vertical */
@@ -188,6 +173,7 @@ body.bg-sakura {
   background-repeat: no-repeat;
   background-size: 100% auto;       /* Ajusta el ancho al 100% para que la altura fluya con el scroll */
   background-color: #1a2332;        /* Color de reserva para el fondo del lago */
+  background-attachment: scroll !important;
   align-items: flex-start;          /* Permite que el contenido fluya hacia abajo */
 }
 
