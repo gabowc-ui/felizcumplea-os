@@ -108,6 +108,63 @@ body {
   transform: scale(0.95);
 }
 
+/* Contenedor principal de la cortina */
+.curtain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+}
+
+.hidden-curtain {
+  display: none !important;
+}
+
+/* Estilos de las dos imágenes de cortina */
+.curtain {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 55vw; /* Cubre un poco más de la mitad para solaparse en el centro */
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.curtain-left {
+  left: 0;
+  transform: translateX(-100%); /* Oculta a la izquierda */
+}
+
+.curtain-right {
+  right: 0;
+  transform: translateX(100%); /* Oculta a la derecha */
+}
+
+/* ESTADOS DE LA ANIMACIÓN */
+
+/* 1. Cerrar la cortina (Se juntan en el centro) */
+.curtain-container.active .curtain-left {
+  transform: translateX(0);
+}
+
+.curtain-container.active .curtain-right {
+  transform: translateX(0);
+}
+
+/* 2. Abrir la cortina (Se deslizan de regreso hacia los lados) */
+.curtain-container.open .curtain-left {
+  transform: translateX(-100%);
+}
+
+.curtain-container.open .curtain-right {
+  transform: translateX(100%);
+}
+
 /* SECCIÓN PRINCIPAL */
 #main-content {
   width: 100%;
