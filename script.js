@@ -31,24 +31,27 @@ function checkPin() {
     // 1. Mostrar el contenedor de la cortina
     curtainContainer.classList.remove("hidden-curtain");
 
-    // 2. Hacer que las cortinas se cierren hacia el centro
+    // 2. Cerrar la cortina hacia el centro
     setTimeout(() => {
       curtainContainer.classList.add("active");
     }, 50);
 
-    // 3. Cuando la cortina esté totalmente cerrada (0.8s), ocultar la pantalla del PIN y mostrar la web
+    // 3. Cuando la cortina esté totalmente cerrada: CAMBIAMOS EL FONDO Y PANTALLA
     setTimeout(() => {
       document.getElementById("pin-screen").classList.add("hidden");
       document.getElementById("main-content").classList.remove("hidden");
+      
+      // AQUÍ CAMBIAMOS AL FONDO LARGO DE SAKURA
+      document.body.classList.add("bg-sakura");
     }, 850);
 
-    // 4. Abrir la cortina hacia los lados para revelar el regalo
+    // 4. Abrir la cortina revelando el nuevo fondo y contenido
     setTimeout(() => {
       curtainContainer.classList.remove("active");
       curtainContainer.classList.add("open");
     }, 1200);
 
-    // 5. Limpiar y ocultar completamente el contenedor al terminar la animación
+    // 5. Ocultar el contenedor de la cortina al terminar
     setTimeout(() => {
       curtainContainer.classList.add("hidden-curtain");
       curtainContainer.classList.remove("open");
