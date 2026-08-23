@@ -254,3 +254,16 @@ audio {
   width: 100%;
   margin-top: 10px;
 }
+
+/* Regla exclusiva para pantallas grandes (computadoras y tablets) */
+@media (min-width: 600px) {
+  body.bg-sakura {
+    /* Evita que el fondo se vuelva un gigante. Lo limitamos al ancho de tus tarjetas */
+    background-size: 500px auto; 
+  }
+  
+  #main-content {
+    /* Como el fondo ya no depende del ancho de la pantalla, fijamos una altura exacta */
+    min-height: 1000px; 
+  }
+}
