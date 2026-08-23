@@ -176,9 +176,12 @@ body.bg-sakura {
 
 #main-content {
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto; /* <-- ¡SÚPER IMPORTANTE! Esto centra el contenido en la PC */
-  min-height: 180vw; /* Tu medida para que baje en el celular */
+  max-width: 500px; 
+  margin: 0 auto; /* Centra tus tarjetas y el audio en la PC */
+  
+  /* LA CLAVE MÁGICA: Ajusta este número */
+  min-height: 180vw; 
+  
   padding: 40px 20px 100px 20px;
   display: flex;
   flex-direction: column;
@@ -250,16 +253,4 @@ body.bg-sakura {
 audio {
   width: 100%;
   margin-top: 10px;
-}
-
-/* REGLAS PARA COMPUTADORA */
-@media (min-width: 501px) {
-  body.bg-sakura {
-    background-size: 500px auto; /* Fija el fondo al mismo ancho máximo de tus tarjetas */
-  }
-  
-  #main-content {
-    /* En PC cambiamos los 'vw' por 'px' para que no sea kilométrico */
-    min-height: 1200px; 
-  }
 }
