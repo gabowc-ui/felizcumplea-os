@@ -179,17 +179,15 @@ body.bg-sakura {
 
 /* Estilo para que el contenedor principal sea largo y permita scrolear */
 #main-content {
-  /* En lugar de min-height, usas height para un tamaño exacto y fijo */
-  height: 176vw; 
-  
   /* Mantienes el resto de tus propiedades igual */
   width: 100%;
   max-width: 500px;
   padding: 40px 20px 100px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-sizing: border-box;
+  gap: 30px;
 }
 
 /* Tarjetas semitransparentes para que el texto y fotos se lean sobre el fondo */
