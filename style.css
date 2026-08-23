@@ -179,7 +179,7 @@ body.bg-sakura {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;          /* <--- Añade esto para centrarlo */
-  min-height: 200vw;       /* <--- Esto controla qué tanto puedes bajar */
+  min-height: 176vw;       /* <--- Esto controla qué tanto puedes bajar */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
