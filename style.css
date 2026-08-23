@@ -180,7 +180,7 @@ body.bg-sakura {
 /* Estilo para que el contenedor principal sea largo y permita scrolear */
 #main-content {
   /* En lugar de min-height, usas height para un tamaño exacto y fijo */
-  height: 178vw; 
+  height: 176vw; 
   
   /* Mantienes el resto de tus propiedades igual */
   width: 100%;
