@@ -177,18 +177,14 @@ body.bg-sakura {
 
 #main-content {
   width: 100%;
-  max-width: 500px; 
-  margin: 0 auto; /* Centra tus tarjetas y el audio en la PC */
-  
-  /* LA CLAVE MÁGICA: Ajusta este número */
-  min-height: 180vw; 
-  
-  padding: 40px 20px 100px 20px;
+  max-width: 500px;
+  margin: 0 auto;          /* <--- Añade esto para centrarlo */
+  min-height: 200vw;       /* <--- Esto controla qué tanto puedes bajar */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 30px;               /* <--- Esto separa tus elementos */
   box-sizing: border-box;
-  gap: 30px;
 }
 
 /* Tarjetas semitransparentes para que el texto y fotos se lean sobre el fondo */
