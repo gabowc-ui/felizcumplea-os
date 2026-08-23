@@ -170,8 +170,9 @@ body.bg-sakura {
   background-image: url('fondo-sakura.jpg');
   background-position: top center;
   background-repeat: no-repeat;
-  background-color: #1a2332; /* Este color rellenará los laterales vacíos en la PC */
   background-size: 100% auto; 
+  background-attachment: scroll !important; /* <- ESTO DESTRABA LA IMAGEN */
+  background-color: #1a2332; 
 }
 
 #main-content {
