@@ -170,16 +170,16 @@ body.bg-sakura {
   background-image: url('fondo-sakura.jpg');
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 100% auto; 
+  background-size: cover; 
   background-attachment: scroll !important; /* <- ESTO DESTRABA LA IMAGEN */
-  background-color: #1a2332; 
+  background-color: #556E75; 
 }
 
 #main-content {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;          /* <--- Añade esto para centrarlo */
-  min-height: 176vw;       /* <--- Esto controla qué tanto puedes bajar */
+  
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
