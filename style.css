@@ -211,8 +211,8 @@ body.bg-sakura {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px 25px;
-    margin-top: 450px; /* <--- AUMENTA ESTE NÚMERO PARA BAJAR LAS FOTOS Y LA NOTA DE VOZ */
+    gap: 40px 35px;
+    margin-top: 500px; /* <--- AUMENTA ESTE NÚMERO PARA BAJAR LAS FOTOS Y LA NOTA DE VOZ */
 }
 
 .polaroid-frame {
@@ -221,7 +221,7 @@ body.bg-sakura {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transform: rotate(-2deg);
     width: calc(33.33% - 18px);
-    max-width: 200px;  /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ANCHO) */
+    max-width: 250px;  /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ANCHO) */
     box-sizing: border-box;
 }
 
@@ -231,7 +231,7 @@ body.bg-sakura {
 
 .polaroid-frame img {
     width: 100%;
-    height: 250px;  /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ALTO) */
+    height: 300px;  /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ALTO) */
     object-fit: cover;
     border-radius: 4px;
 }
