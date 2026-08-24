@@ -212,7 +212,7 @@ body.bg-sakura {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-top: 400px; /* <--- AUMENTA ESTE NÚMERO PARA BAJAR LAS FOTOS Y LA NOTA DE VOZ */
+    margin-top: 450px; /* <--- AUMENTA ESTE NÚMERO PARA BAJAR LAS FOTOS Y LA NOTA DE VOZ */
 }
 
 .polaroid-frame {
