@@ -267,7 +267,7 @@ audio {
     .youtube-card {
         position: absolute;
         left: -350px;  /* POSICIÓN HORIZONTAL */
-        top: 400px;    /* POSICIÓN VERTICAL */
+        top: 350px;    /* POSICIÓN VERTICAL */
         width: 500px;  /* ANCHO DEL VIDEO */
     }
 
