@@ -212,7 +212,7 @@ body.bg-sakura {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-top: 200px; /* <--- AUMENTA ESTE NÚMERO PARA BAJAR LAS FOTOS Y LA NOTA DE VOZ */
+    margin-top: 300px; /* <--- AUMENTA ESTE NÚMERO PARA BAJAR LAS FOTOS Y LA NOTA DE VOZ */
 }
 
 .polaroid-frame {
@@ -267,7 +267,7 @@ audio {
     .youtube-card {
         position: absolute;
         left: -350px;  /* POSICIÓN HORIZONTAL */
-        top: 350px;    /* POSICIÓN VERTICAL */
+        top: 300px;    /* POSICIÓN VERTICAL */
         width: 500px;  /* ANCHO DEL VIDEO */
     }
 
