@@ -175,81 +175,26 @@ body.bg-sakura {
   background-color: #556E75; 
 }
 
+/* --- CONTENEDOR PRINCIPAL --- */
 #main-content {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;          /* <--- Añade esto para centrarlo */
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 30px;               /* <--- Esto separa tus elementos */
-  box-sizing: border-box;
-}
-
-/* Tarjetas semitransparentes para que el texto y fotos se lean sobre el fondo */
-.card {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(6px);
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  margin-bottom: 40px;
-}
-
-/* SECCIÓN PRINCIPAL */
-#main-content {
-  width: 100%;
-  max-width: 480px;
-  padding: 20px;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    box-sizing: border-box;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.photos-grid {
     display: flex;
-    flex-wrap: wrap;       /* <--- ESTO ES LA CLAVE para que pasen a la siguiente fila */
-    justify-content: center;
-    gap: 15px;             /* <--- Reducimos un poco el espacio entre ellas */
+    flex-direction: column;
+    gap: 20px;
 }
 
-.polaroid-frame {
-  background: white;
-  padding: 10px 10px 25px 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transform: rotate(-2deg);
-  width: calc(33.33% - 10px); /* Ocupa exactamente un tercio de la fila menos el espacio del gap */
-  max-width: 130px;           /* Límite para que no crezcan de más */
-  box-sizing: border-box;     /* Vital para que los paddings no rompan el cálculo */
-}
-
-.polaroid-frame.offset {
-  transform: rotate(3deg);
-}
-
-.polaroid-frame img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-audio {
-  width: 100%;
-  margin-top: 10px;
-}
-
+/* --- TÍTULO --- */
 .hero {
     text-align: center;
     margin-top: 120px;
@@ -258,7 +203,52 @@ audio {
 
 .hero h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 55px; /* Sube o baja este número para cambiar el tamaño de la letra */
+    font-size: 55px;
+}
+
+/* --- GALERÍA DE FOTOS (POLAROID) --- */
+.photos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 100px; /* <--- AUMENTA ESTE NÚMERO PARA BAJAR LAS FOTOS Y LA NOTA DE VOZ */
+}
+
+.polaroid-frame {
+    background: white;
+    padding: 10px 10px 25px 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: rotate(-2deg);
+    width: calc(33.33% - 10px);
+    max-width: 130px;
+    box-sizing: border-box;
+}
+
+.polaroid-frame.offset {
+    transform: rotate(3deg);
+}
+
+.polaroid-frame img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* --- TARJETA DE NOTA DE VOZ --- */
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    margin-top: 20px; /* <--- ESPACIO EXTRA ARRIBA DE LA NOTA DE VOZ */
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
 }
 
 /* --- REPRODUCTOR DE YOUTUBE --- */
