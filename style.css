@@ -263,29 +263,28 @@ audio {
 
 /* --- REPRODUCTOR DE YOUTUBE --- */
 .youtube-card {
-    padding: 0;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: transparent !important; /* Elimina el fondo blanco */
+    box-shadow: none !important;        /* Elimina la sombra blanca alrededor */
+    padding: 0 !important;             /* Elimina los bordes blancos */
 }
 
-.youtube-card iframe {
-    width: 100%;
-    height: 200px;
-    border: none;
-    display: block;
-}
-
-/* Ubicación a la izquierda en computadoras */
-@media (min-width: 900px) {
+/* Configuración de tamaño y posición para PC */
+@media (min-width: 768px) {
     #main-content {
-        position: relative; /* Permite ubicar el video en relación al contenedor */
+        position: relative;
     }
 
     .youtube-card {
         position: absolute;
-        left: -310px;  /* Lo desplaza a la izquierda (zona morada) */
-        top: 150px;    /* Lo baja un poco desde el título */
-        width: 280px;  /* Ancho del reproductor */
+        left: -380px;  /* POSICIÓN HORIZONTAL */
+        top: 100px;    /* POSICIÓN VERTICAL */
+        width: 350px;  /* ANCHO DEL VIDEO */
+    }
+
+    .youtube-card iframe {
+        width: 100%;
+        height: 220px; /* ALTO DEL VIDEO */
+        border-radius: 15px; /* Esquinas redondeadas al propio video */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra bonita al video */
     }
 }
