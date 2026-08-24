@@ -223,9 +223,10 @@ body.bg-sakura {
 }
 
 .photos-grid {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+    display: flex;
+    flex-wrap: wrap;       /* <--- ESTO ES LA CLAVE para que pasen a la siguiente fila */
+    justify-content: center;
+    gap: 15px;             /* <--- Reducimos un poco el espacio entre ellas */
 }
 
 .polaroid-frame {
@@ -233,7 +234,9 @@ body.bg-sakura {
   padding: 10px 10px 25px 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transform: rotate(-2deg);
-  max-width: 180px;
+  width: calc(33.33% - 10px); /* Ocupa exactamente un tercio de la fila menos el espacio del gap */
+  max-width: 130px;           /* Límite para que no crezcan de más */
+  box-sizing: border-box;     /* Vital para que los paddings no rompan el cálculo */
 }
 
 .polaroid-frame.offset {
