@@ -178,7 +178,7 @@ body.bg-sakura {
 /* --- CONTENEDOR PRINCIPAL --- */
 #main-content {
     width: 100%;
-    max-width: 650px;
+    max-width: 850px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -208,21 +208,22 @@ body.bg-sakura {
 
 /* --- GALERÍA DE FOTOS (POLAROID) --- */
 .photos-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px 35px;
-    margin-top: 500px; /* <--- AUMENTA ESTE NÚMERO PARA BAJAR LAS FOTOS Y LA NOTA DE VOZ */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fuerza 3 columnas exactas */
+  gap: 40px 50px; /* 40px de espacio vertical, 50px de separación horizontal */
+  margin-top: 500px;
+  width: 100%;
 }
 
 .polaroid-frame {
-    background: white;
-    padding: 10px 10px 25px 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transform: rotate(-2deg);
-    width: calc(33.33% - 18px);
-    max-width: 250px;  /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ANCHO) */
-    box-sizing: border-box;
+  background: white;
+  padding: 10px 10px 25px 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: rotate(-2deg);
+  width: 100%;
+  max-width: 250px;
+  justify-self: center;
+  box-sizing: border-box;
 }
 
 .polaroid-frame.offset {
