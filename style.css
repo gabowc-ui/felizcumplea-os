@@ -204,11 +204,6 @@ body.bg-sakura {
   padding: 20px;
 }
 
-.hero {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -259,4 +254,9 @@ audio {
     text-align: center;
     margin-top: 120px;
     margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px; /* Sube o baja este número para cambiar el tamaño de la letra */
 }
