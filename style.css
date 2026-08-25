@@ -211,7 +211,7 @@ body.bg-sakura {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Fuerza 3 columnas exactas */
   gap: 40px 50px; /* 40px de espacio vertical, 50px de separación horizontal */
-  margin-top: 650px;
+  margin-top: 700px;
   width: 100%;
 }
 
@@ -267,7 +267,7 @@ audio {
 
     .youtube-card {
         position: absolute;
-        left: -100px;  /* POSICIÓN HORIZONTAL */
+        left: -150px;  /* POSICIÓN HORIZONTAL */
         top: 300px;    /* POSICIÓN VERTICAL */
         width: 600px;  /* ANCHO DEL VIDEO */
     }
@@ -300,8 +300,8 @@ audio {
 @media (min-width: 768px) {
     .side-text {
         position: absolute;
-        right: -50px; /* Lo mueve a la derecha (zona verde) */
-        top: 500px;    /* Alinea la altura con el video */
+        right: -60px; /* Lo mueve a la derecha (zona verde) */
+        top: 450px;    /* Alinea la altura con el video */
         width: 400px;  /* Ancho del párrafo */
     }
 }
