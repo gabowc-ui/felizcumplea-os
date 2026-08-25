@@ -267,14 +267,14 @@ audio {
 
     .youtube-card {
         position: absolute;
-        left: -250px;  /* POSICIÓN HORIZONTAL */
+        left: -100px;  /* POSICIÓN HORIZONTAL */
         top: 300px;    /* POSICIÓN VERTICAL */
-        width: 550px;  /* ANCHO DEL VIDEO */
+        width: 700px;  /* ANCHO DEL VIDEO */
     }
 
     .youtube-card iframe {
         width: 100%;
-        height: 450px; /* ALTO DEL VIDEO */
+        height: 600px; /* ALTO DEL VIDEO */
         border-radius: 15px; /* Esquinas redondeadas al propio video */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra bonita al video */
     }
@@ -282,7 +282,7 @@ audio {
 
 /* --- TEXTO A LA DERECHA DEL VIDEO --- */
 .side-text {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     color: #000000;              /* Texto en negro */
     font-weight: 600;            /* Grosor intermedio legible */
@@ -300,8 +300,8 @@ audio {
 @media (min-width: 768px) {
     .side-text {
         position: absolute;
-        right: -100px; /* Lo mueve a la derecha (zona verde) */
-        top: 300px;    /* Alinea la altura con el video */
+        right: -50px; /* Lo mueve a la derecha (zona verde) */
+        top: 500px;    /* Alinea la altura con el video */
         width: 400px;  /* Ancho del párrafo */
     }
 }
