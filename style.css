@@ -279,3 +279,22 @@ audio {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra bonita al video */
     }
 }
+
+/* --- TEXTO A LA DERECHA DEL VIDEO --- */
+.side-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #4a3e3d;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Posición en computadoras (zona verde) */
+@media (min-width: 768px) {
+    .side-text {
+        position: absolute;
+        right: -380px; /* Lo mueve a la derecha (zona verde) */
+        top: 240px;    /* Alinea la altura con el video */
+        width: 350px;  /* Ancho del párrafo */
+    }
+}
