@@ -293,8 +293,8 @@ audio {
 @media (min-width: 768px) {
     .side-text {
         position: absolute;
-        right: -300px; /* Lo mueve a la derecha (zona verde) */
-        top: 280px;    /* Alinea la altura con el video */
+        right: -200px; /* Lo mueve a la derecha (zona verde) */
+        top: 300px;    /* Alinea la altura con el video */
         width: 350px;  /* Ancho del párrafo */
     }
 }
