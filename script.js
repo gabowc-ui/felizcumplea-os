@@ -123,3 +123,33 @@ function abrirMensaje() {
 function cerrarMensaje() {
     document.getElementById('modal-mensaje').style.display = 'none';
 }
+
+/* --- LLUVIA DE PÉTALOS DE SAKURA --- */
+function crearPetalo() {
+    const petalo = document.createElement('div');
+    petalo.classList.add('sakura-petal');
+    
+    // Tamaño aleatorio para que se vea natural (entre 10px y 20px)
+    const tamaño = Math.random() * 10 + 10;
+    petalo.style.width = `${tamaño}px`;
+    petalo.style.height = `${tamaño}px`;
+    
+    // Posición inicial aleatoria a lo ancho de la pantalla
+    petalo.style.left = `${Math.random() * 100}vw`;
+    
+    // Velocidad de caída aleatoria (entre 4 y 9 segundos)
+    petalo.style.animationDuration = `${Math.random() * 5 + 4}s, 2s`;
+    
+    // Transparencia aleatoria para dar efecto de profundidad
+    petalo.style.opacity = Math.random() + 0.3;
+
+    document.body.appendChild(petalo);
+
+    // Elimina el pétalo una vez que sale de la pantalla para no poner lenta la página
+    setTimeout(() => {
+        petalo.remove();
+    }, 9000);
+}
+
+// Crea un pétalo nuevo cada 300 milisegundos (baja el 300 si quieres más pétalos, súbelo si quieres menos)
+setInterval(crearPetalo, 300);
