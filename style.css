@@ -192,7 +192,7 @@ body.bg-sakura {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-bottom: 200px; /* <--- ESTO AGREGA ESPACIO AL FINAL DE LA PÁGINA */
+    padding-bottom: 500px; /* <--- ESTO AGREGA ESPACIO AL FINAL DE LA PÁGINA */
 }
 
 /* --- TÍTULO --- */
