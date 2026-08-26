@@ -1,5 +1,5 @@
 let currentPin = "";
-const correctPin = "1234"; // Define aquí la clave de acceso (ejemplo: fecha importante)
+const correctPin = "1111"; // Define aquí la clave de acceso (ejemplo: fecha importante)
 
 function pressNum(num) {
   if (currentPin.length < 4) {
