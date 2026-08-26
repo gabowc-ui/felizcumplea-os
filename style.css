@@ -168,11 +168,11 @@ body {
 /* Fondo nuevo que se activa tras la contraseña */
 body.bg-sakura {
   background-image: url('fondo-sakura.jpg');
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; 
-  background-attachment: scroll !important; /* <- ESTO DESTRABA LA IMAGEN */
-  background-color: #556E75; 
+  background-size: 100% 100% !important; /* <--- Esto estira la imagen al total del contenido */
+  background-attachment: scroll !important;
+  background-color: #556E75;    
 }
 
 /* --- CONTENEDOR PRINCIPAL --- */
