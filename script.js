@@ -98,10 +98,24 @@ const listaMensajes = [
     "No importa la distancia, mi corazón siempre está contigo."
 ];
 
+let lluviaActiva = null; // Variable para controlar que no se acumulen muchas lluvias
+
 function abrirMensaje() {
+    // 1. Mostrar el mensaje secreto
     const indice = Math.floor(Math.random() * listaMensajes.length);
     document.getElementById('texto-secreto').innerText = `"${listaMensajes[indice]}"`;
     document.getElementById('modal-mensaje').style.display = 'block';
+
+    // 2. Desatar la lluvia de corazones al hacer clic
+    if (!lluviaActiva) {
+        lluviaActiva = setInterval(crearCorazon, 400);
+
+        // La lluvia se detiene automáticamente después de 6 segundos
+        setTimeout(() => {
+            clearInterval(lluviaActiva);
+            lluviaActiva = null;
+        }, 6000); 
+    }
 }
 
 function cerrarMensaje() {
