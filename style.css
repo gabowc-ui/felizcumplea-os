@@ -432,3 +432,87 @@ audio {
 .scroll-card.open .scroll-hint {
     opacity: 0;
 }
+
+/* --- LLUVIA DE CORAZONES --- */
+.corazon {
+    position: fixed;
+    top: -10vh;
+    color: #ff7675;
+    user-select: none;
+    animation: caer linear forwards;
+    z-index: 1;
+}
+
+@keyframes caer {
+    0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+/* --- FLORES INTERACTIVAS --- */
+.flores-container {
+    position: absolute;
+    bottom: 50px; /* Ajusta este número si quieres que floten más arriba o abajo */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 10;
+}
+
+.flor-boton {
+    width: 100px; /* Tamaño de las flores */
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.flor-boton:hover {
+    transform: scale(1.15) translateY(-5px);
+    filter: drop-shadow(0 8px 12px rgba(255,192,203,0.6));
+}
+
+/* --- MODAL (GALLETA DE LA FORTUNA) --- */
+#modal-mensaje {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 245, 247, 0.95);
+    padding: 30px 40px;
+    border-radius: 12px;
+    border: 2px solid #fd79a8;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    text-align: center;
+    z-index: 20;
+    max-width: 80%;
+    min-width: 300px;
+}
+
+#modal-mensaje h2 {
+    margin-top: 0;
+    color: #d63031;
+    font-size: 1.5em;
+    font-family: 'Dancing Script', cursive;
+}
+
+#texto-secreto {
+    font-size: 1.2em;
+    color: #2d3436;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.btn-cerrar {
+    background-color: #fd79a8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-cerrar:hover {
+    background-color: #e84393;
+}
