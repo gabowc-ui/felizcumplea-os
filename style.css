@@ -320,7 +320,7 @@ audio {
 
 .side-image img {
     width: 100%;
-    max-width: 340px; /* Tamaño del ramo */
+    max-width: 450px; /* Tamaño del ramo */
     background: transparent;
     box-shadow: none; /* Quita el marco transparente */
     border: none;
