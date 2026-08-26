@@ -305,3 +305,117 @@ audio {
         width: 400px;  /* Ancho del párrafo */
     }
 }
+
+/* ACTUALIZA TU GRID DE FOTOS CON ESTA LÍNEA */
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 50px;
+    margin-top: 500px;
+    width: 100%;
+    align-items: start; /* <--- Agrega esto para que las fotos no se deformen */
+}
+
+/* --- PERGAMINO CHINO INTERACTIVO --- */
+.scroll-card {
+    grid-column: 1 / -1; /* <--- MAGIA: Obliga al pergamino a ocupar toda la fila */
+    width: 100%;
+    max-width: 650px;    /* <--- Más ancho porque ahora es el centro de atención */
+    justify-self: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    margin: 20px 0;      /* Da un poco de aire arriba y abajo con las fotos */
+}
+
+/* Listón decorativo (Cinta roja y dorada) */
+.scroll-ribbon {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 50px;
+    background-color: #ba2121;
+    border-left: 2px solid #d4af37; /* Detalles dorados */
+    border-right: 2px solid #d4af37;
+    z-index: 3;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+/* Oculta el listón al abrir el pergamino */
+.scroll-card.open .scroll-ribbon {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+    pointer-events: none;
+}
+
+/* Rodillos de madera */
+.scroll-roller {
+    width: 100%;
+    height: 18px;
+    background: linear-gradient(90deg, #2b0f10, #8b263e, #2b0f10);
+    border-radius: 9px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Cuerpo del pergamino desplegable */
+.scroll-paper {
+    background-color: #e8d3a7;
+    width: 94%; /* Casi todo el ancho de los rodillos */
+    margin: 0 auto;
+    border-left: 2px solid #8b263e;
+    border-right: 2px solid #8b263e;
+    max-height: 0; 
+    overflow: hidden;
+    padding: 0 30px; /* Más espacio a los lados para leer cómodo */
+    box-sizing: border-box;
+    transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s ease;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estado abierto */
+.scroll-card.open .scroll-paper {
+    max-height: 800px;
+    padding: 25px 20px;
+}
+
+/* Texto de la carta */
+.scroll-content {
+    color: #2b1a0e;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* Sello rojo (Hanko) */
+.hanko-seal {
+    width: 38px;
+    height: 38px;
+    background-color: #a82424;
+    color: #ffffff;
+    border: 2px solid #731414;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 20px 0 5px auto;
+}
+
+/* Indicador visual "Toca para abrir" */
+.scroll-hint {
+    font-size: 13px;
+    color: #3a2212;
+    font-weight: bold;
+    margin-top: 12px;
+    transition: opacity 0.3s;
+}
+
+.scroll-card.open .scroll-hint {
+    opacity: 0;
+}
