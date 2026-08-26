@@ -62,3 +62,8 @@ function checkPin() {
     clearPin();
   }
 }
+
+function toggleScroll() {
+    const scroll = document.getElementById('chineseScroll');
+    scroll.classList.toggle('open');
+}
