@@ -67,3 +67,43 @@ function toggleScroll() {
     const scroll = document.getElementById('chineseScroll');
     scroll.classList.toggle('open');
 }
+
+// --- LLUVIA DE CORAZONES ---
+function crearCorazon() {
+    const corazon = document.createElement('div');
+    corazon.classList.add('corazon');
+    
+    const simbolos = ['❤️', '💖', '🌸', '✨'];
+    corazon.innerText = simbolos[Math.floor(Math.random() * simbolos.length)];
+    
+    corazon.style.left = Math.random() * 100 + 'vw';
+    corazon.style.fontSize = (Math.random() * 20 + 10) + 'px';
+    
+    const duracion = Math.random() * 4 + 4;
+    corazon.style.animationDuration = duracion + 's';
+    
+    document.body.appendChild(corazon);
+    
+    setTimeout(() => {
+        corazon.remove();
+    }, duracion * 1000);
+}
+
+// --- MENSAJES SECRETOS ---
+const listaMensajes = [
+    "Aunque estemos a 2705km de distancia, siempre te siento cerquita.",
+    "Eres mi persona favorita en el mundo.",
+    "Cada momento contigo es un recuerdo que guardo con cariño.",
+    "Gracias por hacerme sonreír incluso a la distancia.",
+    "No importa la distancia, mi corazón siempre está contigo."
+];
+
+function abrirMensaje() {
+    const indice = Math.floor(Math.random() * listaMensajes.length);
+    document.getElementById('texto-secreto').innerText = `"${listaMensajes[indice]}"`;
+    document.getElementById('modal-mensaje').style.display = 'block';
+}
+
+function cerrarMensaje() {
+    document.getElementById('modal-mensaje').style.display = 'none';
+}
