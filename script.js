@@ -100,22 +100,24 @@ const listaMensajes = [
 
 let lluviaActiva = null; // Variable para controlar que no se acumulen muchas lluvias
 
-function abrirMensaje() {
-    // 1. Mostrar el mensaje secreto
-    const indice = Math.floor(Math.random() * listaMensajes.length);
-    document.getElementById('texto-secreto').innerText = `"${listaMensajes[indice]}"`;
-    document.getElementById('modal-mensaje').style.display = 'block';
-
-    // 2. Desatar la lluvia de corazones al hacer clic
+// ACCIÓN DE LA FLOR 1: Lluvia de corazones temporal
+function iniciarLluvia() {
     if (!lluviaActiva) {
         lluviaActiva = setInterval(crearCorazon, 400);
 
-        // La lluvia se detiene automáticamente después de 6 segundos
+        // Se detiene sola después de 6 segundos
         setTimeout(() => {
             clearInterval(lluviaActiva);
             lluviaActiva = null;
         }, 6000); 
     }
+}
+
+// ACCIÓN DE LA FLOR 2: Mostrar el mensaje secreto
+function abrirMensaje() {
+    const indice = Math.floor(Math.random() * listaMensajes.length);
+    document.getElementById('texto-secreto').innerText = `"${listaMensajes[indice]}"`;
+    document.getElementById('modal-mensaje').style.display = 'block';
 }
 
 function cerrarMensaje() {
