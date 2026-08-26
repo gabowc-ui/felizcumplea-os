@@ -210,7 +210,7 @@ body.bg-sakura {
 .photos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Fuerza 3 columnas exactas */
-  gap: 40px 50px; /* 40px de espacio vertical, 50px de separación horizontal */
+  gap: 60px 50px; /* 40px de espacio vertical, 50px de separación horizontal */
   margin-top: 850px;
   width: 100%;
 }
