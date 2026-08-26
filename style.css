@@ -516,3 +516,33 @@ audio {
 .btn-cerrar:hover {
     background-color: #e84393;
 }
+
+/* --- ANIMACIÓN DE PÉTALOS DE SAKURA --- */
+body {
+    overflow-x: hidden; /* Evita que la pantalla se ensanche si un pétalo vuela hacia los lados */
+}
+
+.sakura-petal {
+    position: fixed;
+    top: -10%;
+    z-index: 9999; /* Asegura que caigan por encima de las fotos y el pergamino */
+    pointer-events: none; /* Para que no estorben si haces clic en el pergamino */
+    
+    /* Diseño del pétalo */
+    background: linear-gradient(135deg, #ffd1dc 0%, #ffb7c5 100%);
+    border-radius: 15px 2px 15px 2px;
+    box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.6);
+    
+    /* Animación combinada: Caer + Balancearse */
+    animation: fall linear infinite, sway 2s ease-in-out infinite alternate;
+}
+
+@keyframes fall {
+    0% { top: -10%; }
+    100% { top: 110%; }
+}
+
+@keyframes sway {
+    0% { transform: translateX(0px) rotate(0deg); }
+    100% { transform: translateX(40px) rotate(45deg); }
+}
