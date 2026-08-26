@@ -309,34 +309,35 @@ audio {
 
 
 /* --- PERGAMINO CHINO INTERACTIVO --- */
-/* --- ZONA MORADA: Imagen a la izquierda --- */
+/* --- ZONA IZQUIERDA: Ramo de flores --- */
 .side-image {
-    grid-column: 1 / 2; /* Le dice que se quede solo en la primera columna */
+    grid-column: 1 / 2;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* La mantiene alineada arriba */
-    margin-top: 20px;
+    align-self: center; /* Centra el ramo verticalmente en la fila */
 }
 
 .side-image img {
     width: 100%;
-    max-width: 250px; /* Mismo ancho máximo que tus polaroids */
-    border-radius: 10px; /* Bordes un poco redondeados */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombrita para que combine */
-    object-fit: cover;
+    max-width: 340px; /* Tamaño del ramo */
+    background: transparent;
+    box-shadow: none; /* Quita el marco transparente */
+    border: none;
+    object-fit: contain;
+    transform: rotate(-7deg); /* Inclinación sutil */
 }
 
-/* --- ZONA CELESTE: Pergamino interactivo --- */
+/* --- ZONA DERECHA: Pergamino interactivo --- */
 .scroll-card {
-    grid-column: 2 / 4; /* MAGIA: Le dice que ocupe desde la columna 2 hasta la 3 */
+    grid-column: 2 / 4;
     width: 100%;
-    max-width: 500px; /* Un poco más angosto para que quepa bien junto a la imagen */
-    justify-self: center; /* Lo centra en su espacio disponible */
+    max-width: 500px;
+    justify-self: center;
+    align-self: center; /* Centra el pergamino a la misma altura del ramo */
     position: relative;
     cursor: pointer;
     user-select: none;
-    margin-top: 20px; 
 }
 
 /* Listón decorativo (Cinta roja y dorada) */
