@@ -222,7 +222,7 @@ body.bg-sakura {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transform: rotate(-2deg);
   width: 100%;
-  max-width: 250px;
+  max-width: 300px; /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ANCHO) */
   justify-self: center;
   box-sizing: border-box;
 }
@@ -233,7 +233,7 @@ body.bg-sakura {
 
 .polaroid-frame img {
     width: 100%;
-    height: 300px;  /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ALTO) */
+    height: 350px;  /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ALTO) */
     object-fit: cover;
     border-radius: 4px;
 }
