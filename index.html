@@ -117,6 +117,20 @@
     </main>
   </div>
 
+  <!-- FLORES INTERACTIVAS Y MENSAJE SECRETO -->
+  <div id="seccion-magica" class="hidden">
+    <div class="flores-container">
+        <img src="flor1.png" alt="Flor Blanca" class="flor-boton" onclick="abrirMensaje()">
+        <img src="flor2.png" alt="Flor Rosa" class="flor-boton" onclick="abrirMensaje()">
+    </div>
+
+    <div id="modal-mensaje">
+        <h2>💌 Mensaje Secreto</h2>
+        <p id="texto-secreto"></p>
+        <button class="btn-cerrar" onclick="cerrarMensaje()">Guardar mensaje</button>
+    </div>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>
