@@ -211,8 +211,9 @@ body.bg-sakura {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Fuerza 3 columnas exactas */
   gap: 60px 50px; /* 40px de espacio vertical, 50px de separación horizontal */
-  margin-top: 850px;
+  margin-top: 800px;
   width: 100%;
+  align-items: start;
 }
 
 .polaroid-frame {
@@ -306,26 +307,36 @@ audio {
     }
 }
 
-/* ACTUALIZA TU GRID DE FOTOS CON ESTA LÍNEA */
-.photos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 50px;
-    margin-top: 500px;
-    width: 100%;
-    align-items: start; /* <--- Agrega esto para que las fotos no se deformen */
-}
 
 /* --- PERGAMINO CHINO INTERACTIVO --- */
-.scroll-card {
-    grid-column: 1 / -1; /* <--- MAGIA: Obliga al pergamino a ocupar toda la fila */
+/* --- ZONA MORADA: Imagen a la izquierda --- */
+.side-image {
+    grid-column: 1 / 2; /* Le dice que se quede solo en la primera columna */
     width: 100%;
-    max-width: 650px;    /* <--- Más ancho porque ahora es el centro de atención */
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* La mantiene alineada arriba */
+    margin-top: 20px;
+}
+
+.side-image img {
+    width: 100%;
+    max-width: 250px; /* Mismo ancho máximo que tus polaroids */
+    border-radius: 10px; /* Bordes un poco redondeados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombrita para que combine */
+    object-fit: cover;
+}
+
+/* --- ZONA CELESTE: Pergamino interactivo --- */
+.scroll-card {
+    grid-column: 2 / 4; /* MAGIA: Le dice que ocupe desde la columna 2 hasta la 3 */
+    width: 100%;
+    max-width: 500px; /* Un poco más angosto para que quepa bien junto a la imagen */
+    justify-self: center; /* Lo centra en su espacio disponible */
     position: relative;
     cursor: pointer;
     user-select: none;
-    margin: 20px 0;      /* Da un poco de aire arriba y abajo con las fotos */
+    margin-top: 20px; 
 }
 
 /* Listón decorativo (Cinta roja y dorada) */
