@@ -2,7 +2,7 @@ let currentPin = "";
 const correctPin = "200905"; // Define aquí la clave de acceso (ejemplo: fecha importante)
 
 function pressNum(num) {
-  if (currentPin.length < 4) {
+  if (currentPin.length < 6) {
     currentPin += num;
     updateDots();
   }
