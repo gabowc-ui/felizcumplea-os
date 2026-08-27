@@ -269,7 +269,7 @@ audio {
 
     .youtube-card {
         position: absolute;
-        left: -100px;  /* POSICIÓN HORIZONTAL */
+        left: -50px;  /* POSICIÓN HORIZONTAL */
         top: 300px;    /* POSICIÓN VERTICAL */
         width: 600px;  /* ANCHO DEL VIDEO */
     }
@@ -302,7 +302,7 @@ audio {
 @media (min-width: 768px) {
     .side-text {
         position: absolute;
-        right: -30px; /* Lo mueve a la derecha (zona verde) */
+        right: -10px; /* Lo mueve a la derecha (zona verde) */
         top: 450px;    /* Alinea la altura con el video */
         width: 400px;  /* Ancho del párrafo */
     }
