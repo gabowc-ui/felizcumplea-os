@@ -211,7 +211,7 @@ body.bg-sakura {
 .photos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Fuerza 3 columnas exactas */
-  gap: 70px 65px; /* 40px de espacio vertical, 50px de separación horizontal */
+  gap: 75px 80px; /* 40px de espacio vertical, 50px de separación horizontal */
   margin-top: 800px;
   width: 100%;
   align-items: start;
@@ -223,7 +223,7 @@ body.bg-sakura {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transform: rotate(-2deg);
   width: 100%;
-  max-width: 300px; /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ANCHO) */
+  max-width: 400px; /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ANCHO) */
   justify-self: center;
   box-sizing: border-box;
 }
@@ -234,7 +234,7 @@ body.bg-sakura {
 
 .polaroid-frame img {
     width: 100%;
-    height: 350px;  /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ALTO) */
+    height: 450px;  /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ALTO) */
     object-fit: cover;
     border-radius: 4px;
 }
@@ -246,7 +246,7 @@ body.bg-sakura {
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    margin-top: 20px; /* <--- ESPACIO EXTRA ARRIBA DE LA NOTA DE VOZ */
+    margin-top: 80px; /* <--- ESPACIO EXTRA ARRIBA DE LA NOTA DE VOZ */
 }
 
 audio {
@@ -321,7 +321,7 @@ audio {
 
 .side-image img {
     width: 100%;
-    max-width: 450px; /* Tamaño del ramo */
+    max-width: 600px; /* Tamaño del ramo */
     background: transparent;
     box-shadow: none; /* Quita el marco transparente */
     border: none;
@@ -545,4 +545,21 @@ body {
 @keyframes sway {
     0% { transform: translateX(0px) rotate(0deg); }
     100% { transform: translateX(40px) rotate(45deg); }
+}
+
+/* --- ANIMACIÓN DE ERROR PARA LOS PUNTOS --- */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+}
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+/* Círculo en color rojo cuando hay error */
+.dot.error {
+    background: #ff4d4d !important;
+    border-color: #ff4d4d !important;
 }
