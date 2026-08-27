@@ -178,7 +178,7 @@ body.bg-sakura {
 /* --- CONTENEDOR PRINCIPAL --- */
 #main-content {
     width: 100%;
-    max-width: 850px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -223,7 +223,7 @@ body.bg-sakura {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transform: rotate(-2deg);
   width: 100%;
-  max-width: 400px; /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ANCHO) */
+  max-width: 450px; /* <--- AUMENTA ESTE NÚMERO PARA LOS POLAROID (ANCHO) */
   justify-self: center;
   box-sizing: border-box;
 }
