@@ -58,9 +58,21 @@ function checkPin() {
     }, 2000);
 
   } else {
-    alert("PIN Incorrecto. Inténtalo de nuevo.");
-    clearPin();
-  }
+        // --- EFECTO MODERNO DE ERROR ---
+        const dotsContainer = document.getElementById("dots");
+        const dots = document.querySelectorAll(".dot");
+
+        // Agrega la animación de sacudida y color rojo
+        dotsContainer.classList.add("shake");
+        dots.forEach(dot => dot.classList.add("error"));
+
+        // Limpia el PIN y quita los efectos después de 0.5 segundos
+        setTimeout(() => {
+            dotsContainer.classList.remove("shake");
+            dots.forEach(dot => dot.classList.remove("error"));
+            clearPin();
+        }, 500);
+    }
 }
 
 function toggleScroll() {
