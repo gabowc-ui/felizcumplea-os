@@ -333,7 +333,7 @@ audio {
 .scroll-card {
     grid-column: 2 / 4;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     justify-self: center;
     align-self: center; /* Centra el pergamino a la misma altura del ramo */
     position: relative;
@@ -378,7 +378,7 @@ audio {
 /* Cuerpo del pergamino desplegable */
 .scroll-paper {
     background-color: #e8d3a7;
-    width: 94%; /* Casi todo el ancho de los rodillos */
+    width: 96%; /* Casi todo el ancho de los rodillos */
     margin: 0 auto;
     border-left: 2px solid #8b263e;
     border-right: 2px solid #8b263e;
@@ -392,7 +392,7 @@ audio {
 
 /* Estado abierto */
 .scroll-card.open .scroll-paper {
-    max-height: 800px;
+    max-height: 1000px;
     padding: 25px 20px;
 }
 
